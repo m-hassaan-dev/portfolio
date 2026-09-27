@@ -24,7 +24,7 @@ export const initialProjects = [
     ],
     live_url: null,
     github_url: "https://github.com/hassaanashfaq51/Music-Player",
-    image_url: "/assets/project-suroor.webp",
+    image_url: "/assets/project-suroor.webp?v=2",
     alt_text: "SUROOR music streaming platform",
     created_at: "2026-09-20T00:00:00.000Z"
   },
@@ -55,7 +55,7 @@ export const initialProjects = [
     ],
     live_url: null,
     github_url: "https://github.com/hassaanashfaq51/visionix",
-    image_url: "/assets/project-visionix.webp",
+    image_url: "/assets/project-visionix.webp?v=2",
     alt_text: "VISIONIX social networking platform",
     created_at: "2026-09-18T00:00:00.000Z"
   },

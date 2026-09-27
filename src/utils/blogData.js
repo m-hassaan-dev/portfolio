@@ -118,11 +118,6 @@ const playTrack = (track) => {
           "Audio API: HTML5 Audio API",
           "Backend & Database: Supabase & PostgreSQL"
         ]
-      },
-      {
-        type: "link",
-        text: "View SUROOR Repository on GitHub",
-        url: "https://github.com/hassaanashfaq51/Music-Player"
       }
     ]
   },
@@ -233,11 +228,6 @@ const channel = supabase
           "Real-Time Engine: Supabase Realtime",
           "Media Storage: Supabase Storage"
         ]
-      },
-      {
-        type: "link",
-        text: "View VISIONIX Repository on GitHub",
-        url: "https://github.com/hassaanashfaq51/visionix"
       }
     ]
   },

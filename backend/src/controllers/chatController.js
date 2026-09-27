@@ -14,11 +14,11 @@ Portfolio Website: https://hassaan-portfolio-lyart.vercel.app/`,
   education: `Muhammad Hassaan holds a Bachelor of Science in Computer Science from COMSATS University Islamabad. His academic curriculum focused on advanced computing topics, system designs, software engineering methodology, and web stack infrastructure.`,
   
   skills: `Muhammad Hassaan's technical expertise and skills include:
-- Frontend: React.js, Vite, HTML5, CSS3, Tailwind CSS, JavaScript (ES6+)
-- Backend & Database: Node.js, Express.js, Supabase, PostgreSQL, Supabase Realtime, Supabase Storage, MongoDB
+- Core Web Skills: React.js, Node.js, Next.js, JavaScript, HTML5, CSS3, Express.js, Supabase, PostgreSQL, MongoDB, Python, C++
+- Frontend: React.js, Next.js, Vite, HTML5, CSS3, Tailwind CSS, JavaScript (ES6+)
+- Backend & Database: Node.js, Express.js, Supabase, PostgreSQL, MongoDB, Supabase Realtime, Supabase Storage
 - APIs & Protocols: RESTful APIs, HTML5 Audio API, WebSockets
-- Languages: JavaScript, Python, C++, Dart
-- Mobile: Flutter
+- Languages: JavaScript, Python, C++
 - Version Control & Tools: Git, GitHub, Postman`,
   
   latestProjects: `Muhammad Hassaan's latest projects are:
@@ -75,11 +75,11 @@ GitHub: https://github.com/hassaanashfaq51/visionix`,
   
   services: `Muhammad Hassaan offers professional services and technical consultations, specializing in:
 - Web Application Development
-- Mobile Application Development (Flutter)
+- Full-Stack Web Development
 - E-Commerce Platform Setup
-- Custom Database Integration (Supabase / PostgreSQL)
+- Custom Database Integration (Supabase / PostgreSQL / MongoDB)
 - API Development & Backend Routing
-- Other Technical Consultations (Free free to request a free consultation!)`,
+- Other Technical Consultations (Feel free to request a free consultation!)`,
   
   contact: `You can reach out to Muhammad Hassaan through the following channels:
 - Email: hassanashfaq51@gmail.com
@@ -185,7 +185,7 @@ const getLocalResponse = (message) => {
   });
 
   // Keywords for Skills
-  const skillsKeywords = ['skill', 'technology', 'technologies', 'programming language', 'frontend', 'backend', 'database', 'stack', 'languages', 'framework', 'react', 'node', 'supabase', 'javascript', 'html', 'css', 'tailwind', 'flutter', 'python', 'c++', 'git', 'github', 'postgresql', 'realtime'];
+  const skillsKeywords = ['skill', 'technology', 'technologies', 'programming language', 'frontend', 'backend', 'database', 'stack', 'languages', 'framework', 'react', 'node', 'next', 'nextjs', 'next.js', 'supabase', 'javascript', 'html', 'css', 'express', 'mongodb', 'tailwind', 'python', 'c++', 'git', 'github', 'postgresql', 'realtime'];
   skillsKeywords.forEach(kw => {
     if (cleanMsg.includes(kw)) scores.skills += 2;
   });
