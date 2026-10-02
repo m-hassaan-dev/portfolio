@@ -18,6 +18,20 @@ const CREDENTIALS = [
     issuer: 'Decode Labs',
     image: '/assets/decodelabs-lor.png',
     alt: 'Letter of Recommendation - Decode Labs'
+  },
+  {
+    id: 'arch-cert-completion',
+    title: 'Certificate of Completion',
+    issuer: 'Arch Technologies',
+    image: '/assets/archtechnologies-certificate.png',
+    alt: 'Certificate of Completion - Arch Technologies'
+  },
+  {
+    id: 'arch-cert-lor',
+    title: 'Letter of Recommendation',
+    issuer: 'Arch Technologies',
+    image: '/assets/archtechnologies-lor.png',
+    alt: 'Letter of Recommendation - Arch Technologies'
   }
 ];
 
@@ -90,7 +104,7 @@ const Certificates = () => {
               aria-label={`View ${item.title} - ${item.issuer}`}
               className="group glass-panel rounded-3xl p-6 sm:p-7 border border-slate-200/60 dark:border-slate-800/60 hover:border-indigo-500/40 dark:hover:border-cyan-500/40 shadow-sm hover:shadow-xl dark:shadow-none hover:shadow-indigo-500/10 transition-all duration-300 cursor-pointer flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-indigo-500/50 relative overflow-hidden"
             >
-              {/* Top: Credential Title & Decode Labs */}
+              {/* Top: Credential Title & Issuer */}
               <div>
                 <h3 className="font-outfit font-bold text-xl sm:text-2xl text-slate-800 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-cyan-300 transition-colors">
                   {item.title}
