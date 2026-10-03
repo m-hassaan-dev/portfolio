@@ -85,7 +85,7 @@ GitHub: https://github.com/hassaanashfaq51/visionix`,
 - Email: hassanashfaq51@gmail.com
 - WhatsApp / Phone: +92 311 6647440 (wa.me/923116647440)
 - LinkedIn: linkedin.com/in/m-hassaan-578455408 (https://www.linkedin.com/in/m-hassaan-578455408)
-- GitHub: github.com/hassaanashfaq51 (https://github.com/hassaanashfaq51)`,
+- GitHub: github.com/m-hassaan-dev (https://github.com/m-hassaan-dev)`,
   
   resume: `You can download Muhammad Hassaan's professional resume from this link: /assets/Muhammad Hassaan.pdf`
 };

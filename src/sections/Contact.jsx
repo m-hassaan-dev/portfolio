@@ -67,9 +67,14 @@ const Contact = () => {
         body: JSON.stringify({ name, email, message })
       });
 
-      const result = await response.json();
+      let result = null;
+      try {
+        result = await response.json();
+      } catch (jsonErr) {
+        console.warn('Could not parse response as JSON:', jsonErr);
+      }
 
-      if (response.ok && result.success) {
+      if (response.ok && (result?.success || response.status === 200 || response.status === 201)) {
         setSubmitted(true);
         confetti({
           particleCount: 100,
@@ -80,11 +85,11 @@ const Contact = () => {
         setEmail('');
         setMessage('');
       } else {
-        setErrorMsg(result.error || 'Failed to submit message. Please try again.');
+        setErrorMsg(result?.error || result?.message || 'Failed to submit message. Please try again.');
       }
     } catch (err) {
       console.error(err);
-      setErrorMsg('Network error. Failed to connect to backend api.');
+      setErrorMsg(err.message || 'Network error. Failed to connect to server.');
     } finally {
       setLoading(false);
     }
@@ -129,9 +134,14 @@ const Contact = () => {
         })
       });
 
-      const result = await response.json();
+      let result = null;
+      try {
+        result = await response.json();
+      } catch (jsonErr) {
+        console.warn('Could not parse response as JSON:', jsonErr);
+      }
 
-      if (response.ok && result.success) {
+      if (response.ok && (result?.success || response.status === 200 || response.status === 201)) {
         setConsSubmitted(true);
         confetti({
           particleCount: 120,
@@ -145,11 +155,11 @@ const Contact = () => {
         setConsSubject('');
         setConsMessage('');
       } else {
-        setConsErrorMsg(result.error || 'Failed to book consultation. Please try again.');
+        setConsErrorMsg(result?.error || result?.message || 'Failed to book consultation. Please try again.');
       }
     } catch (err) {
       console.error(err);
-      setConsErrorMsg('Network error. Failed to connect to backend api.');
+      setConsErrorMsg(err.message || 'Network error. Failed to connect to server.');
     } finally {
       setConsLoading(false);
     }
@@ -182,14 +192,14 @@ const Contact = () => {
 
   const contactDetails = [
     { label: 'Email', value: 'hassanashfaq51@gmail.com', href: 'mailto:hassanashfaq51@gmail.com', icon: GmailIcon },
-    { label: 'GitHub', value: 'github.com/hassaanashfaq51', href: 'https://github.com/hassaanashfaq51', icon: GithubIcon },
+    { label: 'GitHub', value: 'github.com/m-hassaan-dev', href: 'https://github.com/m-hassaan-dev', icon: GithubIcon },
     { label: 'LinkedIn', value: 'linkedin.com/in/m-hassaan-578455408', href: 'https://www.linkedin.com/in/m-hassaan-578455408', icon: LinkedinIcon },
     { label: 'WhatsApp', value: '+92 311 6647440', href: 'https://wa.me/923116647440', icon: WhatsappIcon },
   ];
 
   const projectTypes = [
     'Web Application',
-    'Mobile Application (Flutter)',
+    'Full-Stack Web Application',
     'E-Commerce Platform',
     'Custom Database Integration (Supabase)',
     'API Development / Backend Routing',
@@ -347,7 +357,6 @@ const Contact = () => {
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           required
-                          placeholder="John Doe"
                           className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                         />
                       </div>
@@ -358,7 +367,6 @@ const Contact = () => {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           required
-                          placeholder="john@example.com"
                           className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                         />
                       </div>
@@ -371,7 +379,6 @@ const Contact = () => {
                         onChange={(e) => setMessage(e.target.value)}
                         required
                         rows="5"
-                        placeholder="Hi Hassaan, I would like to collaborate on..."
                         className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                       />
                     </div>
@@ -431,7 +438,6 @@ const Contact = () => {
                           value={consName}
                           onChange={(e) => setConsName(e.target.value)}
                           required
-                          placeholder="John Doe"
                           className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                         />
                       </div>
@@ -442,7 +448,6 @@ const Contact = () => {
                           value={consEmail}
                           onChange={(e) => setConsEmail(e.target.value)}
                           required
-                          placeholder="john@example.com"
                           className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                         />
                       </div>
@@ -455,7 +460,6 @@ const Contact = () => {
                           type="tel" 
                           value={consPhone}
                           onChange={(e) => setConsPhone(e.target.value)}
-                          placeholder="+92 311 6647440"
                           className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                         />
                       </div>
@@ -465,7 +469,6 @@ const Contact = () => {
                           type="text" 
                           value={consSubject}
                           onChange={(e) => setConsSubject(e.target.value)}
-                          placeholder="e.g., E-commerce App development"
                           className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                         />
                       </div>
@@ -478,7 +481,6 @@ const Contact = () => {
                         onChange={(e) => setConsMessage(e.target.value)}
                         required
                         rows="4"
-                        placeholder="Provide details about what you want to construct, technical preferences, timeline, and goals..."
                         className="w-full text-base md:text-sm p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-950/40 text-slate-800 dark:text-slate-100 focus:outline-none focus:border-indigo-500 transition-colors"
                       />
                     </div>

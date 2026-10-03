@@ -63,9 +63,6 @@ const Projects = ({ projects, loading, error, onViewDetails }) => {
             variants={subtitleReveal}
             className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mx-auto mt-4 rounded-full"
           />
-          <p className="text-slate-500 dark:text-slate-400 mt-4 text-sm max-w-md mx-auto">
-            Explore web applications, tools, and mobile software built with modern architectural guidelines.
-          </p>
         </div>
 
         {/* Filter Badges */}

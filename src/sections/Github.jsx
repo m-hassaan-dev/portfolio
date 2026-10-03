@@ -7,7 +7,7 @@ const Github = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const username = 'hassaanashfaq51'; // Recommended standard handle
+  const username = 'm-hassaan-dev'; // Recommended standard handle
 
   const fallbackProfile = {
     name: 'Muhammad Hassaan',
@@ -44,7 +44,7 @@ const Github = () => {
       stargazers_count: 12,
       forks_count: 4,
       language: 'JavaScript',
-      html_url: 'https://github.com/hassaanashfaq51/portfolio'
+      html_url: 'https://github.com/m-hassaan-dev/portfolio'
     },
     {
       id: 4,

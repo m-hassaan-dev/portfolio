@@ -128,7 +128,7 @@ SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/hassaanashfaq51/portfolio.git
+    git clone https://github.com/m-hassaan-dev/portfolio.git
     cd portfolio
     ```
 
@@ -171,7 +171,7 @@ SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 Let's collaborate on your next digital solution!
 
 *   **📧 Email:** [hassanashfaq51@gmail.com](mailto:hassanashfaq51@gmail.com)
-*   **🐙 GitHub:** [github.com/hassaanashfaq51](https://github.com/hassaanashfaq51)
+*   **🐙 GitHub:** [github.com/m-hassaan-dev](https://github.com/m-hassaan-dev)
 *   **💼 LinkedIn:** [linkedin.com/in/m-hassaan-578455408](https://www.linkedin.com/in/m-hassaan-578455408)
 *   **💬 WhatsApp:** [+92 311 6647440](https://wa.me/923116647440)
 

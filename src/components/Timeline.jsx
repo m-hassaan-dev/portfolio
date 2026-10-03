@@ -23,7 +23,7 @@ const timelineData = [
     phase: 'Phase 02',
     icon: BookOpen,
     title: 'Learned modern technologies',
-    description: 'Dived into frontend engineering and mobile frameworks, mastering React.js, Tailwind CSS, Flutter, Dart, and responsive mobile/web layout systems.'
+    description: 'Dived into frontend engineering and modern web frameworks, mastering React.js, Tailwind CSS, modern JavaScript, and responsive web layout systems.'
   },
   {
     phase: 'Phase 03',

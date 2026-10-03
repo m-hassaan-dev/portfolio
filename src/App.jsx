@@ -164,12 +164,9 @@ function App() {
           viewport={{ once: true }}
           className="py-8 border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50/50 dark:bg-slate-950/20 mt-12 text-center text-xs text-slate-500 dark:text-slate-400"
         >
-          <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="max-w-7xl mx-auto px-4 flex justify-center items-center">
             <p className="flex items-center gap-1 font-semibold">
               Made with <Heart size={12} className="text-red-500 fill-red-500 animate-pulse" /> by Muhammad Hassaan © {new Date().getFullYear()}
-            </p>
-            <p className="font-medium text-[10px] tracking-wide">
-              React • Express • Node.js • Supabase
             </p>
           </div>
         </motion.footer>
