@@ -162,17 +162,11 @@ function App() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="py-10 border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50/50 dark:bg-slate-950/20 mt-16 text-center select-none"
+          className="py-8 border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50/50 dark:bg-slate-950/20 mt-16 text-center select-none"
         >
-          <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center space-y-1.5 sm:space-y-2">
-            <p className="font-outfit font-bold text-base sm:text-lg tracking-tight text-slate-800 dark:text-slate-200">
-              Muhammad Hassaan
-            </p>
+          <div className="max-w-7xl mx-auto px-4 flex justify-center items-center">
             <p className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 tracking-normal">
               © 2026 • All rights reserved
-            </p>
-            <p className="text-xs text-slate-400 dark:text-slate-500 tracking-wide font-normal">
-              Crafting digital experiences
             </p>
           </div>
         </motion.footer>
