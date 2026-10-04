@@ -102,15 +102,15 @@ const skillLogos = {
 const Skills = () => {
   const skillsList = [
     "React.js",
-    "Node.js",
     "Next.js",
     "JavaScript",
     "HTML5",
     "CSS3",
+    "Node.js",
     "Express.js",
     "Supabase",
-    "PostgreSQL",
     "MongoDB",
+    "PostgreSQL",
     "Python",
     "C++"
   ];
